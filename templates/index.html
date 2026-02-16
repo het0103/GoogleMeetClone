@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMeet Clone - Video Conferencing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎥 GMeet Clone</h1>
+            <p>Premium video meetings. Now free for everyone.</p>
+        </div>
+
+        <div class="main-content">
+            <div class="card">
+                <h2>Start a New Meeting</h2>
+                <input type="text" id="username" placeholder="Enter your name" maxlength="20">
+                <button id="createMeetingBtn" class="btn btn-primary">
+                    <span>📹</span> Create New Meeting
+                </button>
+            </div>
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <div class="card">
+                <h2>Join a Meeting</h2>
+                <input type="text" id="roomCode" placeholder="Enter meeting code">
+                <button id="joinMeetingBtn" class="btn btn-secondary">
+                    <span>🚪</span> Join Meeting
+                </button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Secure, reliable video calling for everyone</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+</body>
+</html>
