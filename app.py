@@ -95,9 +95,11 @@ def create_room():
             'status': 'created'
         })
         
+        # Build an absolute URL so it's easy to share (works locally and when deployed)
+        full_url = request.host_url.rstrip('/') + f'/room/{room_id}'
         return jsonify({
             'room_id': room_id,
-            'url': f'/room/{room_id}',
+            'url': full_url,
             'success': True
         })
     except Exception as e:

@@ -40,6 +40,31 @@
         </div>
     </div>
 
+    <!-- Meeting Link Modal -->
+    <div id="linkModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🎉 Meeting Created!</h2>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">Share this link with your friends to join the meeting:</p>
+                <div class="link-container">
+                    <input type="text" id="meetingLinkInput" readonly>
+                    <button id="copyLinkModalBtn" class="btn-copy" title="Copy to clipboard">
+                        📋 Copy
+                    </button>
+                </div>
+                <div class="share-options">
+                    <p class="tip">💡 <strong>Tip:</strong> Friends on the same network can join directly. For internet access, use ngrok or deploy to Render.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="joinMeetingModalBtn" class="btn btn-primary">Join Meeting Now</button>
+                <button id="closeModalBtn" class="btn btn-secondary-outline">Cancel</button>
+            </div>
+        </div>
+    </div>
+
     <script src="{{ url_for('static', filename='js/home.js') }}"></script>
 </body>
 </html>
